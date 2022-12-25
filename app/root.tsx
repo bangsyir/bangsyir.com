@@ -12,6 +12,7 @@ import styles from "./styles/app.css";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Bangsyir - happy coding",
+  description: "Build web app with hand not passion.",
   viewport: "width=device-width,initial-scale=1",
 });
 

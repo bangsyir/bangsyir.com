@@ -1,5 +1,22 @@
+import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import Typed from "react-typed";
+
+export const meta: MetaFunction = () => ({
+  "og:type": "website",
+  "og:url": "https://bangsyir.vercel.app",
+  "og:site_name": "bangsyir",
+  "og:title": "Bangsyir - happy coding",
+  "og:description": "Build web app with hand not passion.",
+  "og:image": "https://bangsyir.vercel.app/profile.png",
+  "og:image:width": "500",
+  "og:image:height": "500",
+  "twitter:card": "summary_large_image",
+  "twitter:url": "https://bangsyir.vercel.app",
+  "twitter:title": "Bangsyir - happy coding",
+  "twitter:description": "Build web app with hand not passion.",
+  "twitter:image": "https://bangsyir.vercel.app/public/img/profile.png",
+});
 
 export default function Index() {
   const string = [
