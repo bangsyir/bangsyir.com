@@ -35,14 +35,14 @@ export default function Index() {
           </div>
           <small>Find the problem, and solve it with the code.</small>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 py-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
           <img
             src="/profile.png"
             className="drop-shadow-lg shadow-slate-50"
             alt=""
           />
           {/* linux terminal */}
-          <div className="border border-zinc-600 rounded-md p-2 text-left text-sm shadow-md shadow-zinc-700">
+          <div className="border border-zinc-600 rounded-md p-2 text-left text-sm shadow-md shadow-zinc-700 mb-6">
             <div className="flex items-center justify-between">
               <div className="mx-auto">Terminal - bangsyir.com projects</div>
               <div className="flex gap-2">
