@@ -7,12 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { initializer } from "./config/app";
 import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Bangsyir - happy coding",
-  description: "Build web app with hands not with passion.",
+  title: initializer.appTitle,
+  description: initializer.desc,
   viewport: "width=device-width,initial-scale=1",
 });
 
