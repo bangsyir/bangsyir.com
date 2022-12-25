@@ -7,14 +7,14 @@ export const meta: MetaFunction = () => ({
   "og:url": "https://bangsyir.vercel.app",
   "og:site_name": "bangsyir",
   "og:title": "Bangsyir - happy coding",
-  "og:description": "Build web app with hand not passion.",
+  "og:description": "Build web app with hands not with passion.",
   "og:image": "https://bangsyir.vercel.app/profile.png",
   "og:image:width": "500",
   "og:image:height": "500",
   "twitter:card": "summary_large_image",
   "twitter:url": "https://bangsyir.vercel.app",
   "twitter:title": "Bangsyir - happy coding",
-  "twitter:description": "Build web app with hand not passion.",
+  "twitter:description": "Build web app with hands not with passion.",
   "twitter:image": "https://bangsyir.vercel.app/public/img/profile.png",
 });
 
