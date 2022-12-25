@@ -35,7 +35,7 @@ export default function Index() {
           </div>
           <small>Find the problem, and solve it with the code.</small>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 py-6">
           <img
             src="/profile.png"
             className="drop-shadow-lg shadow-slate-50"
