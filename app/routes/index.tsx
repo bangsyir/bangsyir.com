@@ -73,7 +73,7 @@ export default function Index() {
               <div>
                 <span className="text-green-600">bangsyir</span>
                 <span className="text-zinc-600"> in </span>
-                <span className="text-blue-600">bangsyir</span>
+                <span className="text-blue-600">ubuntu</span>
                 <span className="text-zinc-600"> at </span>
                 <span className="text-yellow-600">
                   {" "}
@@ -101,7 +101,7 @@ export default function Index() {
               <div>
                 <span className="text-green-600">bangsyir</span>
                 <span className="text-zinc-600"> in </span>
-                <span className="text-blue-600">bangsyir</span>
+                <span className="text-blue-600">ubuntu</span>
                 <span className="text-zinc-600"> at </span>
                 <span className="text-yellow-600">
                   {" "}
