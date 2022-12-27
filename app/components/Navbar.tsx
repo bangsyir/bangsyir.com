@@ -12,7 +12,9 @@ export default function Navbar() {
       </Link>
       <Link
         to={"/tech"}
-        className={`${pathname === "/tech" && "font-bold text-green-400"}`}
+        className={`${
+          pathname.includes("/tech") && "font-bold text-green-400"
+        }`}
       >
         Tech
       </Link>
