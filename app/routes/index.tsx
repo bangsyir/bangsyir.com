@@ -9,14 +9,14 @@ export const meta: MetaFunction = () => ({
   "og:site_name": "bangsyir",
   "og:title": initializer.appTitle,
   "og:description": initializer.desc,
-  "og:image": "https://bangsyir.vercel.app/profile.png",
+  "og:image": "https://bangsyir.vercel.app/meta-image.jpg",
   "og:image:width": "500",
   "og:image:height": "500",
   "twitter:card": "summary_large_image",
   "twitter:url": "https://bangsyir.vercel.app",
   "twitter:title": initializer.appTitle,
   "twitter:description": initializer.desc,
-  "twitter:image": "https://bangsyir.vercel.app/public/img/profile.png",
+  "twitter:image": "https://bangsyir.vercel.app/public/img/meta-image.jpg",
 });
 
 export default function Index() {
