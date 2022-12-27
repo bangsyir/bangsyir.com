@@ -30,6 +30,12 @@ export default function Navbar() {
       >
         Blog
       </Link>
+      <Link
+        to={"/about"}
+        className={`${pathname === "/about" && "font-bold text-green-400"}`}
+      >
+        About
+      </Link>
     </div>
   );
 }
