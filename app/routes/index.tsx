@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => ({
 
 export default function Index() {
   const string = [
-    '<span className="text-green-700">pnpm</span> <span> run dev</span>',
+    `<span className="text-green-700">pnpm</span> <span> run dev</span>`,
   ];
 
   return (

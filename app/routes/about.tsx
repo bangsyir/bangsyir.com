@@ -48,7 +48,7 @@ export default function AboutPage() {
         <p>
           Telegram:{" "}
           <a
-            href="https/t.me/Bangsyir"
+            href="https://t.me/Bangsyir"
             target="_blank"
             aria-label="link to telegram"
             rel="noreferrer"
