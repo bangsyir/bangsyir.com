@@ -26,20 +26,15 @@ export default function Index() {
 
   return (
     <Layout>
-      <div className="leading-none pt-10 text-left md:text-center">
+      <div className="leading-none pt-10 text-center">
         <div className="text-3xl uppercase">
           Full-Stack <span className="text-green-400">Web</span> Developer
         </div>
         <small>Find the problem, and give them a solution.</small>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
-        <img
-          src="/profile.png"
-          className="drop-shadow-lg shadow-slate-50"
-          alt=""
-        />
         {/* linux terminal */}
-        <div className="border border-zinc-600 rounded-md p-2 text-left text-sm shadow-md shadow-zinc-700 mt-6">
+        <div className="border border-zinc-600 rounded-md p-2 text-left text-sm shadow-md shadow-zinc-700 mt-6 hover:border-zinc-500">
           <div className="flex items-center justify-between">
             <div className="mx-auto">Terminal - bangsyir.com projects</div>
             <div className="flex gap-2">
@@ -51,10 +46,10 @@ export default function Index() {
           <hr className="border-t border-zinc-600 my-2" />
           <div className="font-mono">
             <div>
-              <span className="text-green-600">bangsyir</span>
-              <span className="text-zinc-600"> in </span>
-              <span className="text-blue-600">ubuntu</span>
-              <span className="text-zinc-600"> at </span>
+              <span className="text-green-400">bangsyir</span>
+              <span className="text-zinc-400"> in </span>
+              <span className="text-blue-400">ubuntu</span>
+              <span className="text-zinc-400"> at </span>
               <span className="text-yellow-600">
                 {" "}
                 ~/projects/code/bangsyir.com{" "}
@@ -62,27 +57,27 @@ export default function Index() {
             </div>
             <div>
               <span> $ </span>
-              <span className="text-green-700">ls</span>
+              <span className="text-green-400">ls</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4">
-              <span className="text-blue-500">app</span>
+              <span className="text-blue-400">app</span>
               <span>package.json</span>
               <span>README.md</span>
-              <span className="text-blue-500">styles</span>
-              <span className="text-blue-500">build</span>
+              <span className="text-blue-400">styles</span>
+              <span className="text-blue-400">build</span>
               <span>pnpm-lock.yml</span>
               <span>remix-config.js</span>
               <span>tailwind.config.js</span>
-              <span className="text-blue-500">node_modules</span>
+              <span className="text-blue-400">node_modules</span>
               <span>public</span>
               <span>remix-env.d.ts</span>
               <span>tsconfig.json</span>
             </div>
             <div>
-              <span className="text-green-600">bangsyir</span>
-              <span className="text-zinc-600"> in </span>
-              <span className="text-blue-600">ubuntu</span>
-              <span className="text-zinc-600"> at </span>
+              <span className="text-green-400">bangsyir</span>
+              <span className="text-zinc-400"> in </span>
+              <span className="text-blue-400">ubuntu</span>
+              <span className="text-zinc-400"> at </span>
               <span className="text-yellow-600">
                 {" "}
                 ~/projects/code/bangsyir.com{" "}
