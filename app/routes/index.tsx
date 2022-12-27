@@ -98,17 +98,22 @@ export default function Index() {
       <div className="mt-8 border border-zinc-700 rounded-md p-4">
         <h1 className="text-xl">Hi, I’m Syir. Nice to meet you.</h1>
         <hr className="my-1 border-t border-zinc-700" />
-        <p className="text-justify indent-8">
-          My name is Syirra Fitrah bin Ahmad. I am from Kuala Lumpur. Always
-          interested on webdevelopment. Capable of the fields of full stack web
-          development (back-end & front-end) and photography. Also i am always
-          interested in solving problems, creative thinking and business.
-        </p>
-        <p className="text-justify indent-8">
-          I started to know programming and design when I was in high school
-          (2011). That was the first time I knew html, css and how to operate
-          coreldraw. At the end of the year in high school, i became interested
-          in learning about web programming and until now.
+        <p className="text-justify indent-10">
+          My name is Syirra Fitrah bin Ahmad, you can call me
+          syir/bosyir/bangsyir. As a full-stack web programmer with expertise in
+          Node.js, i have a strong foundation in both front-end and back-end
+          technologies, allowing you to build complete web applications from
+          start to finish. I'm skilled in using the Node.js runtime to build
+          efficient and scalable back-end systems, and i'm a good understanding
+          of web development principles such as security, performance, and
+          accessibility. also familiar with front-end technologies such as HTML,
+          CSS, and JavaScript, and able to use these technologies to build
+          responsive and user-friendly interfaces. I'm experience working with
+          frameworks and libraries such as React, Nextjs, Remix, and comfortable
+          using them to speed up development and streamline the process of
+          building web applications. With my skills and experience, i'm able to
+          deliver high-quality web applications that provide a seamless and
+          engaging user experience to users.
         </p>
       </div>
     </Layout>
