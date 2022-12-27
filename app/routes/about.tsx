@@ -3,6 +3,15 @@ import Layout from "~/components/Layout";
 export default function AboutPage() {
   return (
     <Layout>
+      <div className="flex justify-center pb-4">
+        <img
+          src="/profile.png"
+          width={300}
+          height={300}
+          className="drop-shadow-lg shadow-slate-50"
+          alt=""
+        />
+      </div>
       <h1 className="text-xl">Hi, I’m Syir. Nice to meet you.</h1>
       <hr className="my-1 border-t border-zinc-700" />
       <p className="text-justify indent-10">
@@ -22,6 +31,33 @@ export default function AboutPage() {
         high-quality web applications that provide a seamless and engaging user
         experience to users.
       </p>
+      <div className="pt-4 text-left">
+        <p>Contact me:</p>
+        <p>
+          Email:{" "}
+          <a
+            href="mailto: bangsyir@proton.me"
+            target="_blank"
+            aria-label="link to telegram"
+            rel="noreferrer"
+            className="font-bold"
+          >
+            bangsyir@proton.me
+          </a>{" "}
+        </p>
+        <p>
+          Telegram:{" "}
+          <a
+            href="https/t.me/Bangsyir"
+            target="_blank"
+            aria-label="link to telegram"
+            rel="noreferrer"
+            className="font-bold"
+          >
+            bangsyir
+          </a>
+        </p>
+      </div>
     </Layout>
   );
 }
