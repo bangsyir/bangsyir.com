@@ -28,7 +28,7 @@ export default function Index() {
     <Layout>
       <div className="leading-none pt-10 text-center">
         <div className="text-3xl uppercase">
-          Full-Stack <span className="text-green-400">Web</span> Developer
+          I'm a full-Stack <span className="text-green-400">Web</span> Developer
         </div>
         <small>Find the problem, and give them a solution.</small>
       </div>
