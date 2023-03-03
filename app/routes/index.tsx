@@ -112,6 +112,7 @@ export default function Index() {
               src={
                 "https://github-readme-stats.vercel.app/api/pin/?username=bangsyir&repo=rm-next-reactquery&theme=gruvbox"
               }
+              loading="lazy"
               alt="rm-repo"
             />
           </a>
@@ -122,6 +123,7 @@ export default function Index() {
           >
             <img
               src="https://github-readme-stats.vercel.app/api/pin/?username=bangsyir&repo=notes-with-graphql&theme=gruvbox"
+              loading="lazy"
               alt="graphql-repo"
             />
           </a>
@@ -132,6 +134,7 @@ export default function Index() {
           >
             <img
               src="https://github-readme-stats.vercel.app/api/pin/?username=bangsyir&repo=bangsyir.com&theme=gruvbox"
+              loading="lazy"
               alt="bangsyir.com"
             />
           </a>
