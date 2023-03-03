@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import Typed from "react-typed";
+import { GlobeAsiaAustraliaIcon } from "~/components/icon/icon";
 import Layout from "~/components/Layout";
 import { initializer } from "~/config/app";
 
@@ -88,6 +89,67 @@ export default function Index() {
               <Typed strings={string} typeSpeed={100} />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="pt-8">
+        <h2 className="font-bold text-xl">Projects</h2>
+        <hr className="my-4 border-zinc-600" />
+        <div className="container mx-auto md:px-32">
+          <p className="pb-4">
+            The last few years, I almost use nodejs in every build an web
+            application. started exploring nodejs since 2019. I learned because
+            nodejs one of the most widely used technologies for server-side
+            programming. Here are some projects i used nodejs to build apps.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 justify-center lg:grid-cols-4 gap-4">
+          <a
+            href="https://github.com/bangsyir/rm-next-reactquery"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={
+                "https://github-readme-stats.vercel.app/api/pin/?username=bangsyir&repo=rm-next-reactquery&theme=gruvbox"
+              }
+              alt="rm-repo"
+            />
+          </a>
+          <a
+            href="https://github.com/bangsyir/notes-with-graphql"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://github-readme-stats.vercel.app/api/pin/?username=bangsyir&repo=notes-with-graphql&theme=gruvbox"
+              alt="graphql-repo"
+            />
+          </a>
+          <a
+            href="https://github.com/bangsyir/bangsyir.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://github-readme-stats.vercel.app/api/pin/?username=bangsyir&repo=bangsyir.com&theme=gruvbox"
+              alt="bangsyir.com"
+            />
+          </a>
+          <a href="https://belihub.com" target="_blank" rel="noreferrer">
+            <div className="border border-gray-100 border- rounded-md p-4 text-left">
+              <p className="font-bold text-md text-amber-400 flex gap-2 items-center">
+                <GlobeAsiaAustraliaIcon className="h-5 w-5 text-amber-600" />
+                <span>Belihub.com</span>
+              </p>
+              <p className="mt-2 text-lime-300 text-xs">
+                👨🏻‍💻 Product management & e-commerce solution.
+              </p>
+              <div className="mt-4 flex items-center gap-2">
+                <div className="bg-green-600 w-3 h-3 rounded-full"></div>
+                <span className="text-sm text-lime-300">Javascript</span>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </Layout>
