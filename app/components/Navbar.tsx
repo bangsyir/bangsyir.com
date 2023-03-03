@@ -18,12 +18,14 @@ export default function Navbar() {
       >
         Tech
       </Link>
-      <Link
-        to={"/projects"}
+      <a
+        href={"https://github.com/bangsyir?tab=repositories"}
+        target="_blank"
+        rel="noreferrer"
         className={`${pathname === "/projects" && "font-bold text-green-400"}`}
       >
-        Projects
-      </Link>
+        Repositories
+      </a>
       <Link
         to={"/blogs"}
         className={`${pathname === "/blogs" && "font-bold text-green-400"}`}
