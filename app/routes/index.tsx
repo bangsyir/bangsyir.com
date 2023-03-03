@@ -95,7 +95,7 @@ export default function Index() {
         <h2 className="font-bold text-xl">Projects</h2>
         <hr className="my-4 border-zinc-600" />
         <div className="container mx-auto md:px-32">
-          <p className="pb-4">
+          <p className="pb-4 text-gray-300">
             The last few years, I almost use nodejs in every build an web
             application. started exploring nodejs since 2019. I learned because
             nodejs one of the most widely used technologies for server-side
