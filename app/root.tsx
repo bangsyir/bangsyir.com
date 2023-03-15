@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <meta
           http-equiv="Content-Security-Policy"
-          content="default-src https://vitals.vercel-insights.com;"
+          content="default-src 'self'; img-src https://*; child-src 'https://vitals.vercel-insights.com;';"
         />
         <Links />
       </head>
