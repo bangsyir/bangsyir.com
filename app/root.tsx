@@ -26,6 +26,10 @@ export default function App() {
     <html lang="en">
       <head>
         <Meta />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src https://vitals.vercel-insights.com;"
+        />
         <Links />
       </head>
       <body>
