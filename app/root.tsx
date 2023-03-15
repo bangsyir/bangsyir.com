@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 import { initializer } from "./config/app";
 import styles from "./styles/app.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -26,15 +27,12 @@ export default function App() {
     <html lang="en">
       <head>
         <Meta />
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="default-src 'self'; img-src https://*; child-src 'https://vitals.vercel-insights.com;';"
-        />
         <Links />
       </head>
       <body>
         <Outlet />
         <ScrollRestoration />
+        <Analytics />
         <Scripts />
         <LiveReload />
       </body>

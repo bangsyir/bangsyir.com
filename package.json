@@ -15,6 +15,7 @@
     "@remix-run/serve": "^1.9.0",
     "@remix-run/vercel": "^1.9.0",
     "@supabase/supabase-js": "^2.2.2",
+    "@vercel/analytics": "^0.1.11",
     "isbot": "^3.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
