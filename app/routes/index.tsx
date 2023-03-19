@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => ({
   "twitter:url": "https://bangsyir.vercel.app",
   "twitter:title": initializer.appTitle,
   "twitter:description": initializer.desc,
-  "twitter:image": "https://bangsyir.vercel.app/public/img/meta-image.jpg",
+  "twitter:image": "https://bangsyir.vercel.app/meta-image.jpg",
 });
 
 export default function Index() {
