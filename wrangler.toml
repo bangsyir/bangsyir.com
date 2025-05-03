@@ -1,4 +1,4 @@
-name = "bangsyir.com"
+name = "bangsyir"
 type = "javascript"
 workers_dev = false
 route = "remix.guide/*"
