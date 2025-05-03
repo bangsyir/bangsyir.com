@@ -1,0 +1,6 @@
+name = "bangsyir.com"
+type = "javascript"
+workers_dev = false
+route = "remix.guide/*"
+compatibility_date = "2025-05-01"
+compatibility_flags = ["streams_enable_constructors"]
