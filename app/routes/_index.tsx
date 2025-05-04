@@ -7,18 +7,18 @@ import { initializer } from "~/config/app";
 export const meta: MetaFunction = () => {
   return [
     { "og:type": "website" },
-    { "og:url": "https://bangsyir.vercel.app" },
+    { "og:url": "https://bangsyir.pages.dev" },
     { "og:site_name": "bangsyir" },
     { "og:title": initializer.appTitle },
     { "og:description": initializer.desc },
-    { "og:image": "https://bangsyir.vercel.app/meta-image.jpg" },
+    { "og:image": "https://bangsyir.pages.dev/meta-image.jpg" },
     { "og:image:width": "500" },
     { "og:image:height": "500" },
     { "twitter:card": "summary_large_image" },
-    { "twitter:url": "https://bangsyir.vercel.app" },
+    { "twitter:url": "https://bangsyir.pages.dev" },
     { "twitter:title": initializer.appTitle },
     { "twitter:description": initializer.desc },
-    { "twitter:image": "https://bangsyir.vercel.app/meta-image.jpg" },
+    { "twitter:image": "https://bangsyir.pages.dev/meta-image.jpg" },
   ];
 };
 
