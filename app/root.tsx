@@ -1,26 +1,27 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
 import { initializer } from "./config/app";
-import styles from "./styles/app.css";
-import { Analytics } from "@vercel/analytics/react";
+// import styles from "~/styles/app.css";
+import "./tailwind.css";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: initializer.appTitle,
-  description: initializer.desc,
-  viewport: "width=device-width,initial-scale=1",
-});
-
-export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+export const meta: MetaFunction = () => {
+  return [
+    { charset: "utf-8" },
+    { title: initializer.appTitle },
+    { description: initializer.desc },
+    { viewport: "width=device-width,initial-scale=1" },
+  ];
 };
+
+// export const links: LinksFunction = () => {
+//   return [{ rel: "stylesheet", href: styles }];
+// };
 
 export default function App() {
   return (
@@ -32,9 +33,7 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
-        <Analytics />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

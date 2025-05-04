@@ -1,43 +1,54 @@
 {
   "private": true,
   "sideEffects": false,
+  "packageManager": "pnpm@9.14.4",
+  "type": "module",
   "scripts": {
-    "build": "npm run build:css && remix build",
-    "build:css": "npx tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "build": "remix vite:build",
+    "build:cloudflare": "npm install -g pnpm@9.14.4 && pnpm install --frozen-lockfile && pnpm run build",
+    "dev": "remix vite:dev",
     "dev:css": "npx tailwindcss -w -m -i ./styles/app.css -o app/styles/app.css",
-    "start": "remix-serve build",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "deploy": "wrangler pages deploy ./build/client",
+    "start": "wrangler pages dev ./build/client"
   },
   "dependencies": {
+    "@cloudflare/workers-types": "^4.20250504.0",
     "@remix-run/cloudflare": "^2.16.5",
-    "@remix-run/node": "^1.9.0",
-    "@remix-run/react": "^1.9.0",
-    "@remix-run/serve": "^1.9.0",
-    "@remix-run/vercel": "^1.9.0",
-    "@supabase/supabase-js": "^2.2.2",
+    "@remix-run/cloudflare-pages": "^2.16.5",
+    "@remix-run/node": "^2.16.5",
+    "@remix-run/react": "^2.16.5",
+    "@remix-run/serve": "^2.16.5",
+    "@remix-run/vercel": "^1.19.3",
     "@vercel/analytics": "^0.1.11",
-    "isbot": "^3.6.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-typed": "^1.2.0",
-    "remix-auth": "^3.4.0",
-    "remix-auth-supabase": "^4.0.2"
+    "isbot": "4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-typed": "^2.0.12",
+    "remix-auth": "^3.7.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.9.0",
-    "@remix-run/eslint-config": "^1.9.0",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "autoprefixer": "^10.4.13",
+    "@remix-run/dev": "^2.16.5",
+    "@types/node": "22.7.4",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
     "concurrently": "^7.6.0",
-    "eslint": "^8.27.0",
-    "postcss": "^8.4.20",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.8.4",
-    "wrangler": "^4.14.1"
+    "eslint": "^9.26.0",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4",
+    "vite-tsconfig-paths": "^4.3.2",
+    "wrangler": "^3.114.8"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=20.0.0"
   }
 }

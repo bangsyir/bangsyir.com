@@ -1,111 +1,56 @@
-import { PassThrough } from "stream";
-import type { EntryContext } from "@remix-run/node";
-import { Response } from "@remix-run/node";
+/**
+ * By default, Remix will handle generating the HTTP Response for you.
+ * You are free to delete this file if you'd like to, but if you ever want it revealed again, you can run `npx remix reveal` ✨
+ * For more information, see https://remix.run/file-conventions/entry.server
+ */
+
+import type { AppLoadContext, EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
-import isbot from "isbot";
-import { renderToPipeableStream } from "react-dom/server";
+import { isbot } from "isbot";
+import { renderToReadableStream } from "react-dom/server";
 
 const ABORT_DELAY = 5000;
 
-export default function handleRequest(
+export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext
+  remixContext: EntryContext,
+  // This is ignored so we can keep it in the template for visibility.  Feel
+  // free to delete this parameter in your app if you're not using it!
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  loadContext: AppLoadContext
 ) {
-  return isbot(request.headers.get("user-agent"))
-    ? handleBotRequest(
-        request,
-        responseStatusCode,
-        responseHeaders,
-        remixContext
-      )
-    : handleBrowserRequest(
-        request,
-        responseStatusCode,
-        responseHeaders,
-        remixContext
-      );
-}
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), ABORT_DELAY);
 
-function handleBotRequest(
-  request: Request,
-  responseStatusCode: number,
-  responseHeaders: Headers,
-  remixContext: EntryContext
-) {
-  return new Promise((resolve, reject) => {
-    let didError = false;
-
-    const { pipe, abort } = renderToPipeableStream(
-      <RemixServer context={remixContext} url={request.url} />,
-      {
-        onAllReady() {
-          const body = new PassThrough();
-
-          responseHeaders.set("Content-Type", "text/html");
-
-          resolve(
-            new Response(body, {
-              headers: responseHeaders,
-              status: didError ? 500 : responseStatusCode,
-            })
-          );
-
-          pipe(body);
-        },
-        onShellError(error: unknown) {
-          reject(error);
-        },
-        onError(error: unknown) {
-          didError = true;
-
+  const body = await renderToReadableStream(
+    <RemixServer
+      context={remixContext}
+      url={request.url}
+      abortDelay={ABORT_DELAY}
+    />,
+    {
+      signal: controller.signal,
+      onError(error: unknown) {
+        if (!controller.signal.aborted) {
+          // Log streaming rendering errors from inside the shell
           console.error(error);
-        },
-      }
-    );
+        }
+        responseStatusCode = 500;
+      },
+    }
+  );
 
-    setTimeout(abort, ABORT_DELAY);
-  });
-}
+  body.allReady.then(() => clearTimeout(timeoutId));
 
-function handleBrowserRequest(
-  request: Request,
-  responseStatusCode: number,
-  responseHeaders: Headers,
-  remixContext: EntryContext
-) {
-  return new Promise((resolve, reject) => {
-    let didError = false;
+  if (isbot(request.headers.get("user-agent") || "")) {
+    await body.allReady;
+  }
 
-    const { pipe, abort } = renderToPipeableStream(
-      <RemixServer context={remixContext} url={request.url} />,
-      {
-        onShellReady() {
-          const body = new PassThrough();
-
-          responseHeaders.set("Content-Type", "text/html");
-
-          resolve(
-            new Response(body, {
-              headers: responseHeaders,
-              status: didError ? 500 : responseStatusCode,
-            })
-          );
-
-          pipe(body);
-        },
-        onShellError(err: unknown) {
-          reject(err);
-        },
-        onError(error: unknown) {
-          didError = true;
-
-          console.error(error);
-        },
-      }
-    );
-
-    setTimeout(abort, ABORT_DELAY);
+  responseHeaders.set("Content-Type", "text/html");
+  return new Response(body, {
+    headers: responseHeaders,
+    status: responseStatusCode,
   });
 }

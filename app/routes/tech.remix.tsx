@@ -1,4 +1,4 @@
-import TechTemplate from "../../components/TechTemplate";
+import TechTemplate from "~/components/TechTemplate";
 
 export default function RemixPage() {
   return (

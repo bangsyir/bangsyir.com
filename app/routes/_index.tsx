@@ -1,24 +1,26 @@
-import type { MetaFunction } from "@remix-run/node";
-import Typed from "react-typed";
+import type { MetaFunction } from "@remix-run/cloudflare";
+import { ReactTyped } from "react-typed";
 import { GlobeAsiaAustraliaIcon } from "~/components/icon/icon";
 import Layout from "~/components/Layout";
 import { initializer } from "~/config/app";
 
-export const meta: MetaFunction = () => ({
-  "og:type": "website",
-  "og:url": "https://bangsyir.vercel.app",
-  "og:site_name": "bangsyir",
-  "og:title": initializer.appTitle,
-  "og:description": initializer.desc,
-  "og:image": "https://bangsyir.vercel.app/meta-image.jpg",
-  "og:image:width": "500",
-  "og:image:height": "500",
-  "twitter:card": "summary_large_image",
-  "twitter:url": "https://bangsyir.vercel.app",
-  "twitter:title": initializer.appTitle,
-  "twitter:description": initializer.desc,
-  "twitter:image": "https://bangsyir.vercel.app/meta-image.jpg",
-});
+export const meta: MetaFunction = () => {
+  return [
+    { "og:type": "website" },
+    { "og:url": "https://bangsyir.vercel.app" },
+    { "og:site_name": "bangsyir" },
+    { "og:title": initializer.appTitle },
+    { "og:description": initializer.desc },
+    { "og:image": "https://bangsyir.vercel.app/meta-image.jpg" },
+    { "og:image:width": "500" },
+    { "og:image:height": "500" },
+    { "twitter:card": "summary_large_image" },
+    { "twitter:url": "https://bangsyir.vercel.app" },
+    { "twitter:title": initializer.appTitle },
+    { "twitter:description": initializer.desc },
+    { "twitter:image": "https://bangsyir.vercel.app/meta-image.jpg" },
+  ];
+};
 
 export default function Index() {
   const string = [
@@ -86,7 +88,7 @@ export default function Index() {
             </div>
             <div>
               <span> $ </span>
-              <Typed strings={string} typeSpeed={100} />
+              <ReactTyped strings={string} typeSpeed={100} />
             </div>
           </div>
         </div>
