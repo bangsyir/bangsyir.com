@@ -39,7 +39,7 @@ export default function Index() {
         {/* linux terminal */}
         <div className="border border-zinc-600 rounded-md p-2 text-left text-sm shadow-md shadow-zinc-700 mt-6 hover:border-zinc-500">
           <div className="flex items-center justify-between">
-            <div className="mx-auto">Terminal - bangsyir.com projects</div>
+            <div className="mx-auto">Terminal - boooshir.com projects</div>
             <div className="flex gap-2">
               <div className="bg-orange-600 rounded-full w-3 h-3"></div>
               <div className="bg-green-600 rounded-full w-3 h-3"></div>
@@ -49,13 +49,13 @@ export default function Index() {
           <hr className="border-t border-zinc-600 my-2" />
           <div className="font-mono">
             <div>
-              <span className="text-green-400">bangsyir</span>
+              <span className="text-green-400">boooshir</span>
               <span className="text-zinc-400"> in </span>
               <span className="text-blue-400">ubuntu</span>
               <span className="text-zinc-400"> at </span>
               <span className="text-yellow-600">
                 {" "}
-                ~/projects/code/bangsyir.com{" "}
+                ~/projects/code/boooshir.com{" "}
               </span>
             </div>
             <div>

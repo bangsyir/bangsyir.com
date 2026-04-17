@@ -12,7 +12,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          Bangsyir
+          Boshir
         </a>
       </p>
     </footer>
